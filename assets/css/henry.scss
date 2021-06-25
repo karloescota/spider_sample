@@ -1,0 +1,20 @@
+.henry {
+  display: flex;
+}
+.categories {
+  min-width: 20rem;
+
+  > .name {
+    margin-bottom: 1rem;
+  }
+}
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  min-width: 15rem;
+  flex: 1;
+  margin-left: 2rem;
+}

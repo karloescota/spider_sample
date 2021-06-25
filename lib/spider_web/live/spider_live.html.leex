@@ -1,0 +1,24 @@
+<button phx-click="crawl">Crawl</button>
+<%= @count %>
+<div class="henry">
+  <div class="categories">
+    <%= for {name, value} <- @categories do %>
+      <div>
+        <span class="name" phx-value-name="<%= name %>" phx-click="select"><%= name %></span>
+        <span><%= value.count %></span>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="products">
+    <div class="card-list">
+      <%= for p <- @products do %>
+        <div class="card">
+          <img src="<%= p.img %>" alt="">
+          <div class="name"><%= p.name %></div>
+          <div class="price"><%= p.price %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
